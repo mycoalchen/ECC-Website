@@ -2,8 +2,22 @@
   --darkred: rgb(179, 1, 30);
   --darkgray: rgb(20, 20, 20);
 }
+@font-face {
+  font-family: GraphikWeb;
+  src: url("fonts/GraphikRegular.otf") format("opentype");
+}
+@font-face {
+  font-family: GraphikWeb;
+  font-weight: 500;
+  src: url("fonts/GraphikMedium.otf") format("opentype");
+}
+@font-face {
+  font-family: GraphikWeb;
+  font-weight: 1000;
+  src: url("fonts/GraphikBold.otf") format("opentype");
+}
 * {
-  font-family: Heebo;
+  font-family: GraphikWeb;
 }
 
 body {
@@ -19,16 +33,20 @@ body {
   max-height: 400px;
   object-fit: cover;
   overflow: hidden;
+  user-select: none;
 }
 #name {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
-  font-weight: 800;
-  color: var(--darkred);
-  text-shadow: 0.4rem 0.4rem 0 white, 0.8rem 0.8rem 0 var(--darkgray);
+  transform: translate(-52%, -50%);
+  width: 100%;
+  font-size: min(15vw, 13vh);
+  font-weight: 1000;
+  color: white;
+  letter-spacing: -0.04em;
+  user-select: none;
+  text-shadow: 0.3rem 0.3rem 0 var(--darkred), 0.6rem 0.6rem 0 var(--darkgray);
 }
 
 .topnav {
@@ -44,6 +62,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-weight: 500;
 }
 .topnav a:hover {
   background-color: white;
