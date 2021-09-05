@@ -1,5 +1,6 @@
 :root {
-  --darkred: rgb(179, 1, 30);
+  --darkred: #9a1d2e;
+  --darkerred: #670000;
   --darkgray: rgb(20, 20, 20);
   background-color: var(--darkred);
 }
@@ -53,7 +54,8 @@ body {
   color: white;
   letter-spacing: -0.04em;
   user-select: none;
-  text-shadow: 0.3rem 0.3rem 0 var(--darkred), 0.6rem 0.6rem 0 var(--darkgray);
+  text-shadow: 0.3rem 0.3rem 0 var(--darkred),
+    0.6rem 0.6rem 0.5rem var(--darkgray);
 }
 
 .topnav {
