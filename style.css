@@ -1,6 +1,7 @@
 :root {
   --darkred: rgb(179, 1, 30);
   --darkgray: rgb(20, 20, 20);
+  background-color: var(--darkred);
 }
 @font-face {
   font-family: GraphikWeb;
@@ -21,25 +22,31 @@
 }
 
 body {
+  height: 100%;
   margin: 0;
 }
 .container {
   position: relative;
   text-align: center;
+  height: min-content;
   color: white;
 }
 #main-img {
   width: 100%;
+  height: 50vh;
   max-height: 400px;
   object-fit: cover;
   overflow: hidden;
   user-select: none;
+  position: relative;
+  text-align: center;
+  display: block;
 }
 #name {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-52%, -50%);
+  transform: translate(-50vw, -50%);
   width: 100%;
   font-size: min(15vw, 13vh);
   font-weight: 1000;
@@ -51,15 +58,18 @@ body {
 
 .topnav {
   background-color: var(--darkred);
-  overflow: hidden;
   display: flex;
+  position: -webkit-sticky;
   position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 47px;
 }
 .topnav a {
   float: left;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px;
   text-decoration: none;
   font-size: 17px;
   font-weight: 500;
@@ -78,4 +88,43 @@ body {
   line-height: 2rem;
   margin: auto 20px;
   font-size: 16px;
+}
+/*Limits the width of the white text section on wider screens- two border boxes, center text/content box*/
+.split3-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  background-color: var(--darkred);
+}
+.split3-border-box {
+  background-color: var(--darkred);
+}
+.split3-center-box {
+  background-color: white;
+  width: 90%;
+  max-width: 1000px;
+  padding: 2vw;
+}
+
+#home-main-text {
+  border-color: var(--darkred);
+  min-height: calc(100% - 47px - min(50vh, 400px));
+}
+
+#height100-with-navbar {
+  min-height: calc(100% - 47px);
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+}
+p {
+  font-size: 20px;
+}
+li {
+  font-size: 18px;
+  padding-bottom: 1vh;
 }
