@@ -66,6 +66,7 @@ body {
   top: 0;
   z-index: 1;
   height: 47px;
+  box-shadow: 0 0 5px var(--darkgray);
 }
 .topnav a {
   float: left;
@@ -96,8 +97,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  position: absolute;
-  margin: 0 auto;
+  margin: 15px auto;
   background-color: var(--darkred);
 }
 .split3-border-box {
@@ -112,11 +112,6 @@ body {
 
 #home-main-text {
   border-color: var(--darkred);
-  min-height: calc(100% - 47px - min(50vh, 400px));
-}
-
-#height100-with-navbar {
-  min-height: calc(100% - 47px);
 }
 
 h1 {
